@@ -1,0 +1,14 @@
+@import 'libs/bootstrap-reboot';
+@import 'libs/fonts';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/animations';
+
+* {
+		font-family: 'Rubik';
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
