@@ -13,57 +13,58 @@
 			<div class="offer__wrapper">
 				<header class="offer__header">
 					<nav class="navHeader">
-						<div class="logo">
-							<img class="logo__img" src="images/Logo.svg" alt="logo">
+						<div class="navHeader__logo">
+							<div class="logo">
+								<a href="#"><img class="logo__img" src="images/Logo.svg" alt="logo"></a>
+							</div>
 						</div>
 						<ul class="navHeader__list">
-							<li class="navHeader_item">About</li>
-							<li class="navHeader_item">Features</li>
-							<li class="navHeader_item">Pricing</li>
-							<li class="navHeader_item">Testimonials</li>
-							<li class="navHeader_item">Help</li>
+							<li class="navHeader__item"><a class="navHeader__link" href="#">About</a></li>
+							<li class="navHeader__item"><a class="navHeader__link" href="#">Features</a></li>
+							<li class="navHeader__item"><a class="navHeader__link" href="#">Pricing</a></li>
+							<li class="navHeader__item"><a class="navHeader__link" href="#">Testimonials</a></li>
+							<li class="navHeader__item"><a class="navHeader__link" href="#">Help</a></li>
 						</ul>
-						<div class="navHeader__signIn">Sign In</div>
-						<div class="navHeader__signUp navHeader__signUp--active">Sign Up</div>
+						<div class="navHeader__sign">
+							<a class="navHeader__signLink" href="#">Sign In</a>
+							<a class="navHeader__signLink navHeader__signLink--active" href="#">Sign Up</a>
+						</div>
 					</nav>
 				</header>
 				<div class="offer__contentWrapper">
-					<h1 class="title">Want anything to be easy with LaslesVPN.</h1>
+					<h1 class="title offer__title">Want anything to be easy with <span>LaslesVPN</span>.</h1>
 					<div class="subtitle">
-						<p>Provide a network for all your needs with ease and fun using LaslesVPN discover interesting features from us.</p>
+						<p>Provide a network for all your needs with ease and fun using <span class="offer__span">LaslesVPN</span> discover interesting features from us.</p>
 					</div>
-					<div class="button">
-						<a class="button__link" href="#">Get Started</a>
+					<div class="offer__button">
+						<a class="button" href="#">Get Started</a>
 					</div>
 					<img class="offer__img" src="images/offer/offer.svg" alt="human with laptop thinking">
 				</div>
-			</div>
-			<div class="stat">
-				<div class="container">
+				<div class="stat">
 					<div class="stat__wrapper">
-						<div class="stat__contentWrapper">
-							<div class="stat__item">
-								<div class="stat__logo">
-									<img src="images/statistics/01.svg" alt="human">
-								</div>
-								<div class="stat__descr">90+<br>Users</div>
+						<div class="stat__item">
+							<div class="stat__logo">
+								<img src="images/statistics/01.svg" alt="human">
 							</div>
-							<div class="stat__item">
-								<div class="stat__logo">
-									<img src="images/statistics/02.svg" alt="geo">
-								</div>
-								<div class="stat__descr">30+<br>Locations</div>
+							<div class="title stat__title">90+<br><span class="subtitle stat__subtitle">Users</span></div>
+						</div>
+						<div class="stat__item">
+							<div class="stat__logo">
+								<img src="images/statistics/02.svg" alt="geo">
 							</div>
-							<div class="stat__item">
-								<div class="stat__logo">
-									<img src="images/statistics/03.svg" alt="server">
-								</div>
-								<div class="stat__descr">50+<br>Servers</div>
+							<div class="title stat__title">30+<br><span class="subtitle stat__subtitle">Locations</span></div>
+						</div>
+						<div class="stat__item">
+							<div class="stat__logo">
+								<img src="images/statistics/03.svg" alt="server">
 							</div>
+							<div class="title stat__title">50+<br><span class="subtitle stat__subtitle">Servers</span></div>
 						</div>
 					</div>
 				</div>
 			</div>
+			
 		</div>
     </section>
 	<section class="features">
@@ -78,10 +79,10 @@
 						<p>You can explore the features that we provide with fun and have their own functions each feature.</p>
 					</div>
 					<ul class="features__list">
-						<li class="features__item">Powerfull online protection.</li>
-						<li class="features__item">Internet without borders.</li>
-						<li class="features__item">Supercharged VPN</li>
-						<li class="features__item">No specific time limits.</li>
+						<li class="subtitle features__item">Powerfull online protection.</li>
+						<li class="subtitle features__item">Internet without borders.</li>
+						<li class="subtitle features__item">Supercharged VPN</li>
+						<li class="subtitle features__item">No specific time limits.</li>
 					</ul>
 				</div>
 			</div>
@@ -90,9 +91,9 @@
 	<section class="choose">
 		<div class="container">
 			<div class="choose__wrapper">
-				<h2 class="title">Choose Your Plan</h2>
+				<h2 class="title choose__title">Choose Your Plan</h2>
 				<div class="subtitle choose__subtitle"><p>Let's choose the package that is best for you and explore it happily and cheerfully.</p></div>
-				<div class="product">
+				<div class="product choose__product">
 					<div class="product__wrapper">
 						<div class="product__image">
 							<img class="product__img" src="images/product/Free.svg" alt="Free Plane">
@@ -106,11 +107,11 @@
 						</ul>
 						<div class="product__footer">
 							<div class="product__subtitle">Free</div>
-							<a class="product__button" href="#">Select</a>
+							<div class="product__btnWrapper">
+								<a class="product__button" href="#">Select</a>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="product">
 					<div class="product__wrapper">
 						<div class="product__image">
 							<img class="product__img" src="images/product/Standard.svg" alt="Free Plane">
@@ -125,12 +126,12 @@
 						</ul>
 						<div class="product__footer">
 							<div class="product__subtitle">$9 <span>/ mo</span></div>
-							<a class="product__button" href="#">Select</a>
+							<div class="product__btnWrapper">
+								<a class="product__button" href="#">Select</a>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="product">
-					<div class="product__wrapper">
+					<div class="product__wrapper product__wrapper--active">
 						<div class="product__image">
 							<img class="product__img" src="images/product/Premium.svg" alt="Free Plane">
 						</div>
@@ -145,7 +146,9 @@
 						</ul>
 						<div class="product__footer">
 							<div class="product__subtitle">$12 <span>/ mo</span></div>
-							<a class="product__button" href="#">Select</a>
+							<div class="product__btnWrapper">
+								<a class="product__button product__button--active" href="#">Select</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -248,7 +251,9 @@
 				</div>
 				<nav class="navFooter">
 					<div class="navFooter__column1">
-						<div class="logo"></div>
+						<div class="logo">
+							<img class="logo__img" src="images/Logo.svg" alt="logo">
+						</div>
 						<div class="subtitle navFooter__subtitle"><p><span>LaslesVPN</span> is a private virtual network that has unique features and has high security.</p></div>
 						<div class="navFooter__social">
 							<div class="navFooter__icon">
