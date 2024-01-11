@@ -1,0 +1,104 @@
+.feedback {
+    &__wrapper {
+        padding: 65px 0 200px 0;
+    }
+    &__subtitle {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 555px;
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+    &__title {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 450px;
+    }
+}
+
+.swiper {
+    width: 1350px;
+    height: 350px;
+    margin: 0 auto;
+    &__item {
+        padding: 30px;
+        border-radius: 10px;
+        border: 2px solid #DDD;
+        width: 450px;
+        height: 230px;
+        &--active {
+            border: 2px solid var(--color-main);
+        }
+    }
+    &__top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &__photo {
+        flex: 20%;
+    }
+    &__title {
+        flex: 65%;
+        line-height: 18px;
+        padding-top: 5px;
+    }
+    &__star {
+        flex: 15%;
+        position: relative;
+        &:after {
+            content: url('../images/star.svg');
+            position: absolute;
+            top: 5%;
+            right: 0;
+        }
+    }
+    &__descr {
+        color: var(--color-title);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        margin-top: 15px
+    }
+    &-button-prev, &-button-next {
+        top: 300px;
+        color: var(--color-main);
+        border: 1px solid var(--color-main);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        transition: 0.2s ease all;
+        &:hover {
+            background-color: var(--color-main);
+        }
+        &:after {
+            font-size: 16px;
+        }
+    }  
+    &-button-prev {
+        left: 90%;
+        &:after {
+            color: var(--color-main);
+        }
+        &:hover {
+            &:after {
+                color: #fff
+            }
+        }
+    }
+    &-button-next {
+        &:after {
+            color: var(--color-main);
+        }
+        &:hover {
+            &:after {
+                color: #fff
+            }
+        }
+        
+    }
+    
+    &-pagination-bullet {
+        background: var(--color-main);
+    }
+}
