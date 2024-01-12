@@ -19,6 +19,7 @@
 @import 'blocks/footer';
 @import 'blocks/promotionMail';
 @import 'blocks/navFooter';
+@import 'blocks/menu';
 
 * {
 		font-family: 'Rubik';
@@ -36,3 +37,5 @@
     max-width: 1140px;
     margin: 0 auto;
 }
+
+@import 'blocks/media';

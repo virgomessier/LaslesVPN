@@ -1,5 +1,5 @@
 .button {
-    width: 250px;
+    max-width: 250px;
     transition: 0.2s all ease;
         &:hover {
             transform: scale(1.05);

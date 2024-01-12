@@ -12,8 +12,8 @@ const swiper = new Swiper('.swiper', {
 	// If we need pagination
 	pagination: {
 		el: '.swiper-pagination',
-		clickable: true,
-		dynamicBullets: true,
+		clickable: false,
+		dynamicBullets: false,
 	},
 	
 	// Navigation arrows
@@ -28,6 +28,20 @@ const swiper = new Swiper('.swiper', {
 	// },
 
 	slidesPerView: 2.5,
+	breakpoints: {
+		// when window width is >= 320px
+		250: {
+			slidesPerView: 1,
+		  },
+		992: {
+			slidesPerView: 2,
+			spaceBetween: 50,
+		  },
+		1400: {
+		  slidesPerView: 2.5,
+		  spaceBetween: 100,
+		},
+	  },
 
 	speed: 700,
 	spaceBetween: 50,
@@ -151,5 +165,28 @@ document.addEventListener('DOMContentLoaded', () => {
 	  nextButton.classList.remove('swiper-button--active');
 	});
 });
+
+// код для меню
+document.addEventListener('DOMContentLoaded', function () {
+	// Получаем элементы по классам
+	var hamburger = document.querySelector('.navHeader__hamburger');
+	var menu = document.querySelector('.menu');
+  
+	// Обработчик события при клике на hamburger
+	hamburger.addEventListener('click', function () {
+	  // Добавляем/удаляем класс активности
+	  menu.classList.toggle('menu--active');
+	});
+  
+	// Обработчик события при клике в любую область документа
+	document.addEventListener('click', function (event) {
+	  // Проверяем, был ли клик вне элемента .menu или .hamburger
+	  if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+		// Убираем класс активности
+		menu.classList.remove('menu--active');
+	  }
+	});
+  });
+  
   
   

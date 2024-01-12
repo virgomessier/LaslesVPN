@@ -1,8 +1,9 @@
 .logo {
-    width: 140px;
+    max-width: 140px;
     height: 36px;
     display: block;
     &__img {
         width: 100%;
+        object-fit: cover;
     }
 }

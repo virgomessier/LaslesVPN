@@ -17,9 +17,7 @@
 }
 
 .swiper {
-    width: 1350px;
     height: 350px;
-    margin: 0 auto;
     &__item {
         padding: 30px;
         border-radius: 10px;
@@ -98,8 +96,11 @@
             color: #fff
         }
     }
-    
     &-pagination-bullet {
         background: var(--color-main);
     }
+}
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    left: -47%;
+    top: 290px;
 }

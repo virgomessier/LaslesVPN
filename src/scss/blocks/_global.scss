@@ -16,14 +16,12 @@
 
     &__map {
         margin-top: 155px;
+        max-width: 1060px;
     }
 
     &__mapImg {
-        max-width: 1060px;
-        img {
             width: 100%;
             object-fit: cover;
-        }
     }
 
     &__company {

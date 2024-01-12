@@ -1,5 +1,6 @@
 .footer {
     background: #F8F8F8;
+    position: relative;
     &__wrapper {
         padding: 185px 0 100px 0;
         position: relative;
@@ -7,5 +8,6 @@
     &__promotionMail {
         position: absolute;
         top: -118px;
+        left: 0;
     }
 }

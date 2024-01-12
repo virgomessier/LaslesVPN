@@ -1,0 +1,26 @@
+.menu {
+    position: absolute;
+    top: 0;
+    transform: translateY(-200%);
+    padding: 25px;
+    border: 1px solid #fafafa;
+    background-color: #F8F8F8;
+    box-shadow: 0 0 5px rgba(0,0,0, 0.2);
+    width: 100%;
+    z-index: 100;
+    transition: 0.4s all ease;
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+    }
+    &__link {
+        text-decoration: none;
+        color: var(--color-text);
+    }
+    &--active {
+        transform: translateY(0px);
+    }
+}
