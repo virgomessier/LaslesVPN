@@ -90,12 +90,12 @@
         &:after {
             color: var(--color-main);
         }
-        &:hover {
-            &:after {
-                color: #fff
-            }
+    }
+    &-button--active {
+        background-color: var(--color-main);
+        &:after {
+            color: #fff
         }
-        
     }
     
     &-pagination-bullet {

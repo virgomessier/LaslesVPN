@@ -1,0 +1,11 @@
+.footer {
+    background: #F8F8F8;
+    &__wrapper {
+        padding: 185px 0 100px 0;
+        position: relative;
+    }
+    &__promotionMail {
+        position: absolute;
+        top: -118px;
+    }
+}
