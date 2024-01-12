@@ -10,6 +10,7 @@
         border-radius: 10px;
         border: 2px solid #DDD;
         position: relative;
+        transition: 0.2s all ease;
         &--active {
             border-radius: 10px;
             border: 2px solid var(--color-main);
@@ -70,6 +71,7 @@
         text-decoration: none;
         border-radius: 50px;
         border: 2px solid var(--color-main);
+        transition: 0.2s all ease;
         &--active {
             background: var(--color-main);
             color: #fff;

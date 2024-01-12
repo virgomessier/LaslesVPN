@@ -33,7 +33,7 @@ const swiper = new Swiper('.swiper', {
 	spaceBetween: 50,
 
 	// autoplay: {
-	// 	delay: 3000,
+	// 	delay: 4000,
 	// },
 
 	// effect: 'coverflow',
@@ -49,4 +49,107 @@ const swiper = new Swiper('.swiper', {
 		PageUpDown: false,
 	},
 
+	
+
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+	const productWrappers = document.querySelectorAll('.product__wrapper');
+	const productButtons = document.querySelectorAll('.product__button');
+	let activeIndex = 2; // Индекс третьего элемента, начинается с 0
+  
+	productWrappers.forEach((wrapper, index) => {
+	  wrapper.addEventListener('mouseover', () => {
+		if (index !== activeIndex) {
+		  productWrappers[activeIndex].classList.remove('product__wrapper--active');
+		  productButtons[activeIndex].classList.remove('product__button--active');
+  
+		  wrapper.classList.add('product__wrapper--active');
+		  productButtons[index].classList.add('product__button--active');
+  
+		  activeIndex = index;
+		}
+	  });
+	});
+  
+	document.addEventListener('mouseout', () => {
+	  // Ничего не делаем, так как требуется сохранение активного элемента
+	});
+  });
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+	const swiperItems = document.querySelectorAll('.swiper__item');
+	const nextButton = document.querySelector('.swiper-button-next');
+	const prevButton = document.querySelector('.swiper-button-prev');
+  
+	let isTransitioning = false; // Переменная для отслеживания текущего состояния перехода
+  
+	// Устанавливаем класс активности на первый элемент .swiper__item
+	swiperItems[0].classList.add('swiper__item--active');
+  
+	nextButton.addEventListener('click', () => {
+	  if (!isTransitioning) {
+		transitionSlide('next');
+	  }
+	});
+  
+	prevButton.addEventListener('click', () => {
+	  if (!isTransitioning) {
+		transitionSlide('prev');
+	  }
+	});
+  
+	document.addEventListener('click', (event) => {
+	  const targetClassList = event.target.classList;
+  
+	  if (!targetClassList.contains('swiper-button-next') && !targetClassList.contains('swiper-button-prev')) {
+		swiperItems.forEach(item => {
+		  if (item.classList.contains('swiper__item--active')) {
+			item.classList.add('swiper__item--active');
+		  }
+		});
+	  }
+	});
+  
+	function transitionSlide(direction) {
+	  isTransitioning = true; // Устанавливаем флаг перехода
+  
+	  const currentActive = document.querySelector('.swiper__item--active');
+	  currentActive.classList.remove('swiper__item--active');
+  
+	  let nextIndex, nextItem;
+  
+	  if (direction === 'next') {
+		nextIndex = (Array.from(swiperItems).indexOf(currentActive) + 1) % swiperItems.length;
+		nextItem = swiperItems[nextIndex];
+	  } else if (direction === 'prev') {
+		nextIndex = (Array.from(swiperItems).indexOf(currentActive) - 1 + swiperItems.length) % swiperItems.length;
+		nextItem = swiperItems[nextIndex];
+	  }
+  
+	  nextItem.classList.add('swiper__item--active');
+  
+	  setTimeout(() => {
+		isTransitioning = false; // Снимаем флаг перехода после завершения анимации
+	  }, 700); // Установите задержку на основе вашего времени анимации (в миллисекундах)
+	}
+  });
+
+  // Код для кнопок слайдера
+  document.addEventListener('DOMContentLoaded', () => {
+	const nextButton = document.querySelector('.swiper-button-next');
+	const prevButton = document.querySelector('.swiper-button-prev');
+  
+	nextButton.addEventListener('mouseenter', () => {
+	  nextButton.classList.add('swiper-button--active');
+	  prevButton.classList.remove('swiper-button--active');
+	});
+  
+	prevButton.addEventListener('mouseenter', () => {
+	  prevButton.classList.add('swiper-button--active');
+	  nextButton.classList.remove('swiper-button--active');
+	});
+});
+  
+  

@@ -23,6 +23,23 @@
         color: var(--color-text);
         font-size: 16px;
         font-weight: 400;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            transition: 0.3s all ease;
+            background-color: var(--color-main);
+        }
+        &:hover {
+            color: #000;
+            &:after {
+                width: 100%;
+            }
+        }
     }
     &__sign {
         text-align: end;
@@ -38,6 +55,14 @@
         cursor: pointer;
         text-decoration: none;
         padding: 0 15px;
+        transition: 0.3s all ease;
+        &:hover {
+            transition: 0.3s all ease;
+            &:nth-child(2) {
+                background-color: var(--color-main);
+                color: #fff;
+            }
+        }
         &--active {
             padding: 10px 40px 10px 40px;
             border-radius: 50px;

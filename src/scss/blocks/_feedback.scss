@@ -76,7 +76,7 @@
         }
     }  
     &-button-prev {
-        left: 90%;
+        left: 75%;
         &:after {
             color: var(--color-main);
         }
@@ -87,6 +87,7 @@
         }
     }
     &-button-next {
+        right: 15.5%;
         &:after {
             color: var(--color-main);
         }

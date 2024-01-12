@@ -4,7 +4,6 @@
     justify-content: space-between;
     &__column1 {
         max-width: 340px;
-        overflow: hidden;
     }
     &__column2 {
         max-width: 120px;
@@ -25,6 +24,10 @@
         align-items: center;
         margin-right: 20px;
         cursor: pointer;
+        transition: 0.2s all ease;
+        &:hover {
+            box-shadow: 0 5px 10px rgba(0,0,0, 0.2);
+        }
     }
     &__social {
         display: flex;
@@ -42,8 +45,12 @@
     &__subtitle {
         display: block;
         text-decoration: none;
+        transition: 0.2s all ease;
         &:nth-child(n+2) {
             margin-top: 10px;
+        }
+        &:hover {
+            color: var(--color-main);
         }
     }
     &__logo {
